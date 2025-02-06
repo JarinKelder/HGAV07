@@ -1,0 +1,24 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+#header {
+    background-color: brown;
+    display:flex;
+    padding:2px;
+}
+    .menu-button{
+        background-color: aliceblue;
+        
+    }
+#start {
+    background-color: rgb(89, 165, 42);
+    height:200px
+}
+#inhoud {
+    background-color: brown;
+}
+#contact {
+    background-color: brown;
+}
