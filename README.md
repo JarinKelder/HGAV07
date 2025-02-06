@@ -1,2 +1,3 @@
 # HGAV07
-Vak GeoDesign
+Vak GeoDesign voor het portfolio
+
