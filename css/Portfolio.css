@@ -3,22 +3,109 @@
     padding:0;
     box-sizing: border-box;
 }
+
+h4 {
+    text-align: center;
+}
+
 #header {
     background-color: brown;
     display:flex;
     padding:2px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 4px;
+    height: 10vh;
 }
+
     .menu-button{
+        display: flex;
         background-color: aliceblue;
-        
+        height: 6vh; 
+        width: 8vw;
+        margin: 1vw;
+        padding: 1vw;
+        align-items: center;
     }
+
 #start {
+    display: flex;
     background-color: rgb(89, 165, 42);
-    height:200px
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4vw;
+    padding: 2vw;
 }
+    .eigen-verhaal{
+        height: 60vh;
+        width: 45vw;
+        background-color: rgb(255, 187, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .eigen-foto{
+        height: 60vh;
+        width: 30vw;
+        background-color: aqua;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
 #inhoud {
-    background-color: brown;
+    display: flex;
+    background-color: rgb(216, 65, 178);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.2vw;
 }
-#contact {
-    background-color: brown;
+    .drie-blokken{
+        height: 45vh;
+        width: 30vw;
+        background-color: rgb(255, 0, 0);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+#inhoudtwee {
+     display: flex;
+     background-color: rgb(73, 121, 114);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.2vw;
+}
+
+    .grote-vlak{
+        height: 45vh;
+        width: 60vw;
+        background-color: rgb(17, 133, 187);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .kleine-vlak{
+        height: 45vh;
+        width: 32vw;
+        background-color: rgb(37, 18, 109);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact {
+    display:flex;
+    background-color: rgb(98, 92, 182);
+    height: 15vh;
+    justify-content: center;
+    align-items: center;
 }
