@@ -74,6 +74,15 @@ h4 {
         justify-content: center;
         align-items: center;
     }
+#leaflet { 
+    height: 95%; 
+    width:95%;
+    }
+
+#maplibre { 
+    height: 100%; 
+    width:100%;
+    }
 
 #inhoudtwee {
      display: flex;

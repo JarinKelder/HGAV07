@@ -3,6 +3,12 @@
     <head>
         <title>HGAV07 portfolio</title>
         <link rel="stylesheet" href="css/Portfolio.css">
+        
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+        <script src='https://unpkg.com/maplibre-gl/dist/maplibre-gl.js'></script>
+        <link href='https://unpkg.com/maplibre-gl/dist/maplibre-gl.css' rel='stylesheet' />
     </head>
     <body>
         <div id="header">
@@ -31,13 +37,13 @@
 
         <div id="inhoud">
             <div class="drie-blokken">
-                <h2>Blok 1</h2>
+                <div id="leaflet"></div>
             </div>
             <div class="drie-blokken">
                 <h2>Blok 2</h2>
             </div>
             <div class="drie-blokken">
-                <h2>Blok 3</h2>
+                <div id="maplibre"></div>
             </div>
         </div>
 
