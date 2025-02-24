@@ -1,15 +1,31 @@
+body {
+    background-color: #E0F6FF;
+}
+
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
 }
 
+p {
+    margin: 0 0 2% 0;
+}
+
 h4 {
     text-align: center;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+
 }
 
 #header {
-    background-color: brown;
+    background-color: #113063;
     display:flex;
     padding:2px;
     flex-direction: row;
@@ -22,17 +38,23 @@ h4 {
 
     .menu-button{
         display: flex;
-        background-color: aliceblue;
+        background-color: #90c1d1;
+        border-radius: 20px;
         height: 6vh; 
         width: 8vw;
         margin: 1vw;
         padding: 1vw;
         align-items: center;
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-button:hover {
+        background-color: #e0b922; 
     }
 
 #start {
     display: flex;
-    background-color: rgb(89, 165, 42);
+    background-color: rgba(89, 165, 42, 0);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -43,23 +65,28 @@ h4 {
     .eigen-verhaal{
         height: 60vh;
         width: 45vw;
-        background-color: rgb(255, 187, 0);
+        background-color: white;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        padding: 2%;
+        border-radius: 50px;
     }
+
     .eigen-foto{
         height: 60vh;
         width: 30vw;
-        background-color: aqua;
+        background-color: #113063;
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 50%;
     }
 
 #inhoud {
     display: flex;
-    background-color: rgb(216, 65, 178);
+    background-color: #113063;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -69,10 +96,11 @@ h4 {
     .drie-blokken{
         height: 45vh;
         width: 30vw;
-        background-color: rgb(255, 0, 0);
+        background-color: #E0F6FF;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 30px;
     }
 #leaflet { 
     height: 95%; 
@@ -86,7 +114,7 @@ h4 {
 
 #inhoudtwee {
      display: flex;
-     background-color: rgb(73, 121, 114);
+     background-color: rgba(73, 121, 114, 0);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -97,24 +125,30 @@ h4 {
     .grote-vlak{
         height: 45vh;
         width: 60vw;
-        background-color: rgb(17, 133, 187);
+        background-color: #90c1d1;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 40px;
     }
     .kleine-vlak{
         height: 45vh;
         width: 32vw;
-        background-color: rgb(37, 18, 109);
+        background-color: #e0b922;
         display: flex;
         justify-content: center;
         align-items: center;
+        border-radius: 40px;
     }
 
     #contact {
     display:flex;
-    background-color: rgb(98, 92, 182);
+    background-color: #e0b922;
     height: 15vh;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 100vw;
+    clip-path: polygon(0 50%, 10% 60%, 20% 50%, 30% 60%, 40% 50%, 50% 60%, 60% 50%, 70% 60%, 80% 50%, 90% 60%, 100% 50%, 100% 100%, 0 100%);
 }
+
