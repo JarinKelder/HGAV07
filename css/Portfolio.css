@@ -11,6 +11,28 @@ body {
 
 p {
     margin: 0 0 2% 0;
+    font-family: loos-normal, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+h2, h3, h4{
+    font-family: acier-bat-solid, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h1{
+    color: white;
+    font-family: acier-bat-solid, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+h3{
+    text-align:center;
+    color:#113063;
+    font-size: 40px;
 }
 
 h4 {
@@ -24,16 +46,43 @@ img {
 
 }
 
+.section-divider {
+    width: 3vw;
+    height: 0.5vh;
+    background-color: #007bff;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
 #header {
     background-color: #113063;
     display:flex;
     padding:2px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: center;
-    column-gap: 4px;
     height: 10vh;
+    position: fixed;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.menu-logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.menu-logo img {
+    max-height: 50%; 
+    width: auto;
+    object-fit: contain;
+}
+
+#button-container{
+    justify-content: flex-end;
+    display: flex;
+
 }
 
     .menu-button{
@@ -41,8 +90,8 @@ img {
         background-color: #90c1d1;
         border-radius: 20px;
         height: 6vh; 
-        width: 8vw;
-        margin: 1vw;
+        width: max-content;
+        margin: 0.7vw;
         padding: 1vw;
         align-items: center;
         transition: background-color 0.3s ease;
@@ -61,6 +110,7 @@ img {
     align-items: center;
     gap: 4vw;
     padding: 2vw;
+    padding-top: 14vh;
 }
     .eigen-verhaal{
         height: 60vh;
@@ -92,6 +142,9 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 2.2vw;
+    margin-top: 2.2vw;
+    margin-bottom: 2.2vw;
+
 }
     .drie-blokken{
         height: 45vh;
@@ -113,8 +166,8 @@ img {
     }
 
 #inhoudtwee {
-     display: flex;
-     background-color: rgba(73, 121, 114, 0);
+    display: flex;
+    background-color: rgba(73, 121, 114, 0);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;

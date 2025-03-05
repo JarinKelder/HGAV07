@@ -26,3 +26,16 @@ function myfunction(){
     zoom: 1, // starting zoom
     hash: true
 });
+
+maplibre.on('load', function(){
+  console.log(maplibre.getStyle ())
+
+  maplibre.setPaintProperty('Water', 'fill-color', '#E0F6FF')
+  maplibre.setPaintProperty('Water shadow', 'fill-color', '#90c1d1')
+})
+
+function veranderKleur(){
+  maplibre.setPaintProperty('Water', 'fill-color', '#90c1d1')
+  maplibre.setPaintProperty('Water shadow', 'fill-color', '#113063')
+}
+

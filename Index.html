@@ -10,80 +10,140 @@
 
     <script src='https://unpkg.com/maplibre-gl/dist/maplibre-gl.js'></script>
     <link href='https://unpkg.com/maplibre-gl/dist/maplibre-gl.css' rel='stylesheet' />
+
+    <link rel="stylesheet" href="https://use.typekit.net/uan4ekp.css">
 </head>
 
-<body>
-    <div id="header">
-        <div class="menu-button">
-            <h4>tab1</h4>
+<body>  
+        <div id="header">
+            <div class="menu-logo">
+                <img src="img/Logo Jarin Kelder.PNG" alt="Logo Jarin Kelder">
+                <h1>Jarin Kelder</h1>
+            </div>
+            
+            <div id="button-container">
+                <div class="menu-button">
+                    <h4>Geschiedenis</h4>
+                </div>
+                <div class="menu-button">
+                    <h4>Webontwikkeling</h4>
+                </div>
+                <div class="menu-button">
+                    <h4>Kaartvisualisaties</h4>
+                </div>
+                <div class="menu-button">
+                    <h4>Reflectie</h4>
+                </div>
+            </div>
         </div>
-        <div class="menu-button">
-            <h4>tab2</h4>
+        <div id="start">
+            <div class="eigen-verhaal">
+                <h2>Wie ben ik?</h2>
+                    <p>Ik ben Jarin Kelder, 20 jaar oud en studeer Geo, Media & Design. Deze studie volg ik aan de Aeres Hogeschool Almere.
+                        Hierbij vind ik het leuk om data op zo’n manier te visualiseren dat er een verhaal wordt verteld, ik neem graag de
+                        lezer mee in het verhaal. Buiten de studie vind ik het lekker om zelf te sporten, veel sport te kijken/volgen en om
+                        met vrienden te zijn. </p>
+                <h2>Waar sta ik voor?</h2>
+                    <p>Ik sta voor professionaliteit, gebruikersgemak en overzicht. Ik wil door middel van mijn ontwerpen een gebruiker
+                        helpen het overzicht te behouden. Ontwerpen van mij zullen er vaak strak en modern uitzien. Ik vind een betrouwbare
+                        uitstraling belangrijk, dit houdt in dat er niet te veel felle kleuren gebruikt zullen worden en designs er relatief
+                        zakelijk uit zullen zien.</p>
+                <h2>Wat kan ik?</h2>
+                    <p>Binnen mijn opleiding leer ik veel over data-visualisatie, UX/UI design, storytelling, data-analyse en cartografie.
+                        We doen heel veel binnen de opleiding, dus als wij klaar zijn, zijn wij erg breed opgeleid. Wat mij voornamelijk
+                        interesseert, is het deel van data-visualisatie en storytelling. Ik kan goed de verbinding leggen tussen een
+                        gebruiker/doelgroep en een eindproduct. Om zo het juiste verhaal te kunnen overbrengen op de doelgroep.</p>
+            </div>
+            <div class="eigen-foto">
+                <img src="img/FamilieKelder_-45.jpg" alt="Foto Jarin Kelder">
+            </div>
         </div>
-        <div class="menu-button">
-            <h4>tab3</h4>
-        </div>
-        <div class="menu-button">
-            <h4>tab4</h4>
-        </div>
-    </div>
 
-    <div id="start">
-        <div class="eigen-verhaal">
-            <h2>Wie ben ik?</h2>
-                <p>Ik ben een innovatief en leergierig persoon met een passie voor sport. Het visualiseren van complexe
-                    gegevens om die gegevens begrijpelijk te maken, is mijn kracht. Dat doe ik bijvoorbeeld door middel van infographics,
-                    animatievideo's en dashboards. Ik streef er altijd naar om
-                    de kernboodschap van de gegevens duidelijk over te brengen. </p>
-            <h2>Waar sta ik voor?</h2>
-                <p>Ik sta voor eenduidigheid, gebruikersgemak en overzicht. Ik wil door middel van mijn ontwerpen een gebruiker helpen
-                    het overzicht te behouden.  Persoonlijk ben ik iemand die houdt van een strak, modern en net design. Dit houdt in dat
-                    ik niet snel al te felle kleuren zal gebruiken, ik ben iemand die houdt van een zakelijke vormgeving,
-                    een design moet begrijpelijk en aantrekkelijk zijn. Ik vind een betrouwbare
-                    uitstraling belangrijk.</p>
-            <h2>Wat kan ik?</h2>
+    <section id= "Geschiedenis">
+        <h3>Geschiedenis</h3>
+        <hr class="section-divider">
+        <div id="inhoudtwee">
+            <div class="grote-vlak">
+                <h2>groot vak</h2>
+            </div>
+            <div class="kleine-vlak">
+                <h2>klein vak</h2>
+            </div>
+        </div>
+        <div id="inhoudtwee">
+            <div class="kleine-vlak">
+                <h2>klein vak</h2>
+            </div>
+            <div class="grote-vlak">
+                <h2>groot vak</h2>
+            </div>
+        </div>
+    </section>
 
+    <section id="Webontwikkeling">
+        <h3>Webontwikkeling</h3>
+        <hr class="section-divider">
+        <div id="inhoudtwee">
+            <div class="grote-vlak">
+                <h2>groot vak</h2>
+            </div>
+            <div class="kleine-vlak">
+                <h2>klein vak</h2>
+            </div>
         </div>
-        <div class="eigen-foto">
-            <img src="img/FamilieKelder_-45.jpg" alt="Foto Jarin Kelder">
+        <div id="inhoudtwee">
+            <div class="kleine-vlak">
+                <h2>klein vak</h2>
+            </div>
+            <div class="grote-vlak">
+                <h2>groot vak</h2>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="inhoud">
-        <div class="drie-blokken">
-            <div id="leaflet"></div>
+    <section id="kaarten">
+        <h3>Kaartvisualisaties</h3>
+        <hr class="section-divider">
+        <div id="inhoud">
+            <div class="drie-blokken">
+                <div id="leaflet"></div>
+            </div>
+            <div class="drie-blokken">
+                <button onClick="veranderKleur()">Verander kleur!</button>
+            </div>
+            <div class="drie-blokken">
+                <div id="maplibre"></div>
+            </div>
         </div>
-        <div class="drie-blokken">
-            <h2>Blok 2</h2>
-        </div>
-        <div class="drie-blokken">
-            <div id="maplibre"></div>
-        </div>
-    </div>
+    </section>
 
-    <div id="inhoudtwee">
-        <div class="grote-vlak">
-            <h2>groot vak</h2>
+    <section id= "Reflectie">
+        <h3>Reflectie</h3>
+        <hr class="section-divider">
+        <div id="inhoudtwee">
+            <div class="grote-vlak">
+                <h2>groot vak</h2>
+            </div>
+            <div class="kleine-vlak">
+                <h2>klein vak</h2>
+            </div>
         </div>
-        <div class="kleine-vlak">
-            <h2>klein vak</h2>
+        <div id="inhoudtwee">
+            <div class="kleine-vlak">
+                <h2>klein vak</h2>
+            </div>
+            <div class="grote-vlak">
+                <h2>groot vak</h2>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <div id="inhoudtwee">
-        <div class="kleine-vlak">
-            <h2>klein vak</h2>
+        <div id="contact">
+            <h2>
+                Contact gedeelte
+            </h2>
         </div>
-        <div class="grote-vlak">
-            <h2>groot vak</h2>
-        </div>
-    </div>
 
-    <div id="contact">
-        <h2>
-            Contact gedeelte
-        </h2>
-    </div>
     <script src="javascript/Portfolio.js"></script>
 </body>
 
