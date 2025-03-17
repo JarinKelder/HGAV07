@@ -14,12 +14,19 @@ p {
     font-family: loos-normal, sans-serif;
     font-style: normal;
     font-weight: 100;
+    color: white;
+    font-size: 1.1vw;
+}
+
+.black-text {
+    color: black;
 }
 
 h2, h3, h4{
     font-family: acier-bat-solid, sans-serif;
     font-style: normal;
     font-weight: 400;
+    color: #113063;
 }
 
 h1{
@@ -27,6 +34,10 @@ h1{
     font-family: acier-bat-solid, sans-serif;
     font-style: normal;
     font-weight: 100;
+}
+
+h2{
+    font-size: 1.7vw;
 }
 
 h3{
@@ -82,6 +93,7 @@ img {
 #button-container{
     justify-content: flex-end;
     display: flex;
+    margin-right: 1.3vw;
 
 }
 
@@ -155,6 +167,28 @@ img {
         align-items: center;
         border-radius: 30px;
     }
+
+    .drie-blokken2{
+        height: 45vh;
+        width: 30vw;
+        background-color: #E0F6FF;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
+        border-radius: 30px;
+    }
+
+    .drie-blokken3{
+        height: 45vh;
+        width: 30vw;
+        background-color: #E0F6FF;
+        border-radius: 30px;
+        padding: 1.7vw;
+        text-align: center;
+    }
+
 #leaflet { 
     height: 95%; 
     width:95%;
@@ -179,10 +213,11 @@ img {
         height: 45vh;
         width: 60vw;
         background-color: #90c1d1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         border-radius: 40px;
+        column-count: 2;  
+        column-gap: 20px; 
+        Padding: 3vh;
+
     }
     .kleine-vlak{
         height: 45vh;
@@ -192,6 +227,8 @@ img {
         justify-content: center;
         align-items: center;
         border-radius: 40px;
+        overflow: hidden;
+        position: relative;
     }
 
     #contact {
@@ -202,6 +239,5 @@ img {
     align-items: center;
     position: relative;
     width: 100vw;
-    clip-path: polygon(0 50%, 10% 60%, 20% 50%, 30% 60%, 40% 50%, 50% 60%, 60% 50%, 70% 60%, 80% 50%, 90% 60%, 100% 50%, 100% 100%, 0 100%);
 }
 

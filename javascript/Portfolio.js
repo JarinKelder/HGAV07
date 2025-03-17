@@ -1,10 +1,4 @@
-var button = document.querySelector("#header")
 
-button.addEventListener("click", myfunction);
-
-function myfunction(){
-    alert("Header clicked!");
-}
 
   //initialize the map         
   const map = L.map('leaflet').setView([52.527794, 5.434294], 15);
