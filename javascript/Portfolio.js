@@ -33,59 +33,35 @@ function veranderKleur(){
   maplibre.setPaintProperty('Water shadow', 'fill-color', '#113063')
 }
 
-var mijnGeojson = {
-  "type": "FeatureCollection",
-  "features": [
-    {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "coordinates": [
-          [
-            5.406009146260487,
-            52.53747638659826
-          ],
-          [
-            5.405075222702891,
-            52.51555331909614
-          ],
-          [
-            5.452772024404425,
-            52.51333375426526
-          ],
-          [
-            5.456208585849737,
-            52.53513321037795
-          ],
-          [
-            5.438815059499831,
-            52.54051813740958
-          ],
-          [
-            5.405905006767853,
-            52.537539730054334
-          ]
-        ],
-        "type": "LineString"
-      }
-    }
-  ]
-}
+var url = 'https://api.pdok.nl/bzk/locatieserver/search/v3_1/lookup?id=wpl-4b405aebf0e238eaff53612e5c6624e2&fl=*'
 
-maplibre.on('load', function (e) {
-  // ADD GEOJSON SOURCE
-  maplibre.addSource('Houtribsluizen', {
-      'type': 'geojson',
-      'data': mijnGeojson
-  });
-
-  map.addLayer({
-    'id': 'geojson-polygoon',
-    'type': 'fill',
-    'source': 'Houtribsluizen',
-    'layout': {},
-    'paint': {
-        'fill-color': '#000fff',
-    }
-});
-});
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.response.docs[0].geometrie_ll)
+    
+ 
+    var mijnWKT = data.response.docs[0].geometrie_ll
+    
+    var mijnGeojson = Terraformer.wktToGeoJSON(mijnWKT);
+    
+    maplibre.on('load', function (e) {
+      // ADD GEOJSON SOURCE
+      maplibre.addSource('Houtribsluizen', {
+          'type': 'geojson',
+          'data': mijnGeojson
+      });
+    
+      maplibre.addLayer({
+        'id': 'geojson-polygoon',
+        'type': 'fill',
+        'source': 'Ommen',
+        'layout': {},
+        'paint': {
+            'fill-color': '#000fff',
+        }
+    });
+    });
+  
+  
+  })
