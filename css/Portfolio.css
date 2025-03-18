@@ -22,7 +22,7 @@ p {
     color: black;
 }
 
-h2, h3, h4{
+h2, h3, h4 {
     font-family: acier-bat-solid, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -49,6 +49,13 @@ h3{
 h4 {
     text-align: center;
     color: white;
+}
+
+h5 {
+    font-size: 1vw;
+    font-family: loos-normal, sans-serif;
+    font-weight: 100;
+    margin: 0 0 0.3% 0;
 }
 
 img {
@@ -231,13 +238,22 @@ img {
         position: relative;
     }
 
+        .kleine-vlak img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+
     #contact {
     display:flex;
     background-color: #e0b922;
-    height: 15vh;
+    height: 20vh;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: relative;
     width: 100vw;
+    padding-right: 3vw;
+    flex-direction: column;
 }
 
