@@ -91,11 +91,6 @@ img {
     margin-left: 2vw;
 }
 
-.menu-logo img {
-    max-height: 50%; 
-    width: auto;
-    object-fit: contain;
-}
 
 #button-container{
     justify-content: flex-end;
@@ -206,6 +201,15 @@ img {
     width:95%;
     }
 
+
+#kleurknop {
+    background-color: #113063;  
+    color: white;  
+    border: none;  
+    padding: 10px 20px;  
+    border-radius: 5px;  
+}
+
 #inhoudtwee {
     display: flex;
     background-color: rgba(73, 121, 114, 0);
@@ -223,8 +227,10 @@ img {
         border-radius: 40px;
         column-count: 2;  
         column-gap: 20px; 
-        Padding: 3vh;
-
+        Padding-left: 1.7vw;
+        Padding-right: 1.7vw;
+        Padding-top: 3vh;
+        Padding-bottom: 1vh;
     }
     .kleine-vlak{
         height: 45vh;
@@ -243,6 +249,19 @@ img {
             height: 100%;
             object-fit: cover;
             position: absolute;
+        }
+
+        .kleine-vlak-tekst{
+            height: 45vh;
+            width: 32vw;
+            background-color: #e0b922;
+            display: flex;
+            justify-content: center;
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            padding: 3vw;
+            flex-direction: column;
         }
 
     #contact {
