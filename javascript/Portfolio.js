@@ -42,12 +42,12 @@ fetch(url)
     
  
     var mijnWKT = data.response.docs[0].geometrie_ll
-    
+
     var mijnGeojson = Terraformer.wktToGeoJSON(mijnWKT);
     
     maplibre.on('load', function (e) {
       // ADD GEOJSON SOURCE
-      maplibre.addSource('Houtribsluizen', {
+      maplibre.addSource('Ommen', {
           'type': 'geojson',
           'data': mijnGeojson
       });
@@ -65,3 +65,34 @@ fetch(url)
   
   
   })
+
+
+// URL van de API om de geometrie van Zwolle op te halen
+var zwolleGeoUrl = "https://api.pdok.nl/bzk/locatieserver/search/v3_1/lookup?id=wpl-4b405aebf0e238eaff53612e5c6624e2&fl=*";
+
+// Controleer of de Leaflet-kaart correct is geïnitialiseerd
+map = document.querySelector(".leaflet")?.leafletInstance;
+
+if (!map) {
+    console.error("Leaflet-kaart voor Zwolle niet gevonden! Zorg dat de kaart correct is geïnitialiseerd.");
+} else {
+    fetch(zwolleGeoUrl)
+        .then(response => response.json())
+        .then(data => {
+            // Haal de WKT-geometrie van Zwolle op uit de API-response
+            var zwolleWKT = data.response.docs[0].geometrie_ll;
+
+            // Converteer WKT naar GeoJSON
+            var zwolleGeojson = Terraformer.wktToGeoJSON(zwolleWKT);
+
+            // Voeg de GeoJSON-data toe aan de Leaflet-kaart met een unieke laagnaam
+            L.geoJSON(zwolleGeojson, {
+                style: {
+                    color: "#ff0000", // Rode randkleur voor onderscheid
+                    weight: 2,
+                    fillOpacity: 0.3
+                }
+            }).addTo(map);
+        })
+        .catch(error => console.error("Fout bij het laden van GeoJSON voor Zwolle:", error));
+}
